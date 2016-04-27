@@ -1,8 +1,6 @@
 package fr.lteconsulting.angular2gwt.client;
 
 import fr.lteconsulting.angular2gwt.Component;
-import fr.lteconsulting.angular2gwt.RouteConfig;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
@@ -20,27 +18,13 @@ import jsinterop.annotations.JsType;
  */
 //@formatter:off
 @Component(
-	selector = "my-app",
-	templateUrl = "template/application.component.html",
-	directives = {RouterDirectives.class},
-	providers = {HeroService.class, RouterProviders.class} )
-@RouteConfig(
-    path= "/heroes",
-    name= "Heroes",
-    component= HeroesComponent.class )
-@RouteConfig(
-	path= "/dashboard",
-	name= "Dashboard",
-	component= DashboardComponent.class,
-	useAsDefault= true )
-@RouteConfig(
-	path="/detail/:id",
-	name= "HeroDetail",
-	component= HeroFormComponent.class)
+		selector = "my-app",
+		template = "<hero-list></hero-list>",
+		directives = {HeroListComponent.class},
+		providers = {HeroService.class}
+		)
 //@formatter:on
 @JsType
 public class ApplicationComponent
 {
-	@JsProperty
-	private String title = "Tour of Heroes";
 }

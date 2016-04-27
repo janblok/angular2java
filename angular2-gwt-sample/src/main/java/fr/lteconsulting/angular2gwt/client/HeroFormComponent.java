@@ -3,6 +3,7 @@ package fr.lteconsulting.angular2gwt.client;
 import fr.lteconsulting.angular2gwt.Component;
 import fr.lteconsulting.angular2gwt.Input;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsIgnore;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -16,13 +17,13 @@ import jsinterop.annotations.JsType;
 //@formatter:off
 @Component(
 		selector = "hero-form",
-		templateUrl = "template/hero-form.component.html")
+		templateUrl = "templates/hero-form.component.html")
 //@formatter:on
 @JsType
 public class HeroFormComponent
 {
+	@JsIgnore
 	private HeroService heroService;
-	private RouteParams routeParams;
 
 	@JsProperty
 	private JsArray<String> powers = JsArray.of( "Really Smart", "Super Flexible", "Super Hot", "Weather Changer", "Do nothing" );
@@ -38,10 +39,9 @@ public class HeroFormComponent
 	private boolean active = true;
 
 	@JsConstructor
-	private HeroFormComponent( HeroService heroService, RouteParams routeParams )
+	private HeroFormComponent( HeroService heroService )
 	{
 		this.heroService = heroService;
-		this.routeParams = routeParams;
 	}
 
 	@JsMethod
@@ -58,22 +58,4 @@ public class HeroFormComponent
 		active = false;
 		JsTools.setTimeout( () -> active = true, 0 );
 	}
-
-	@JsMethod
-	private void ngOnInit()
-	{
-		Object oId = routeParams.get( "id" );
-		int id = Integer.parseInt( String.valueOf( oId ) );
-		Hero hero = heroService.getHero( id );
-		this.model = hero;
-	}
-
-	@JsMethod
-	private void goBack()
-	{
-		back();
-	}
-
-	@JsMethod( namespace = "window.history", name = "back" )
-	private static native void back();
 }
