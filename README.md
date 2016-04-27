@@ -1,4 +1,4 @@
-# Java Angular 2 application utilizing the GWT 2.8-beta1 compiler
+# Java Angular 2 application utilizing the GWT compiler
 
 Angular 2 has been wrapped around Typescript and Dart because those languages offer code generation (for component metadata).
 
