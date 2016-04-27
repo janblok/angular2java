@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
 //@formatter:off
 @Component(
 	selector = "my-app",
-	template = "<h1>{{title}}</h1><nav><a [routerLink]=\\\"['Dashboard']\\\">Dashboard</a><a [routerLink]=\\\"['Heroes']\\\">Heroes</a></nav><router-outlet></router-outlet>",
+	templateUrl = "application.component.html",
 	directives = {RouterDirectives.class},
 	providers = {HeroService.class, RouterProviders.class} )
 @RouteConfig(
