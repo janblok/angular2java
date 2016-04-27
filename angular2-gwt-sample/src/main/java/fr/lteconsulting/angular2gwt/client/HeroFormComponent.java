@@ -16,7 +16,7 @@ import jsinterop.annotations.JsType;
 //@formatter:off
 @Component(
 		selector = "hero-form",
-		templateUrl = "hero-form.component.html")
+		templateUrl = "template/hero-form.component.html")
 //@formatter:on
 @JsType
 public class HeroFormComponent

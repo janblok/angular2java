@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
 //@formatter:off
 @Component(
 	selector = "my-app",
-	templateUrl = "application.component.html",
+	templateUrl = "template/application.component.html",
 	directives = {RouterDirectives.class},
 	providers = {HeroService.class, RouterProviders.class} )
 @RouteConfig(

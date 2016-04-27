@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
 //@formatter:off
 @Component(
 	selector = "my-dashboard",
-	templateUrl= "dashboard.component.html"
+	templateUrl= "template/dashboard.component.html"
 )
 //@formatter:on
 @JsType

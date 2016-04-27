@@ -20,8 +20,8 @@ import jsinterop.annotations.JsType;
 //@formatter:off
 @Component(
 		selector = "hero-list",
-		templateUrl = "hero-list.component.html",
-		styleUrls = {"hero-list.component.css"},
+		templateUrl = "template/hero-list.component.html",
+		styleUrls = {"css/hero-list.component.css"},
 		directives = {HeroFormComponent.class})
 //@formatter:on
 @JsType
