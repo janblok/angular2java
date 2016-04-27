@@ -25,6 +25,6 @@ import jsinterop.annotations.JsType;
 		)
 //@formatter:on
 @JsType
-public class ApplicationComponent
+public class MyAppComponent
 {
 }

@@ -25,6 +25,6 @@ public class Application implements EntryPoint
 		 * 
 		 * The application controller is implemented in the {@link ApplicationComponent} class
 		 */
-		Angular.bootstrap( ApplicationComponent_AngularComponent.get() );
+		Angular.bootstrap( MyAppComponent_AngularComponent.get() );
 	}
 }
