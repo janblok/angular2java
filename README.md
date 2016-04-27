@@ -1,43 +1,27 @@
-# Angular 2 application writing with GWT 2.8-SNAPSHOT
+# Java Angular 2 application utilizing the GWT 2.8-beta1 compiler
 
-It's time to try it ! Angular 2 has been wrapped around Typescript and Dart because those languages offer code generation (for component metadata).
+Angular 2 has been wrapped around Typescript and Dart because those languages offer code generation (for component metadata).
 
-GWT also can do code generation, with the standard Java JSR-269...
+Java has the standard Java JSR-269...
 
-So this project is a try to integrate Angular 2 and GWT in a way that is pleasant for the developper.
-
-**This project will move a lot during the next few days, so don't expect complete consistency between the code and the README... You should prefer going to see the code !!!**
-
-Thanks !
+So this project is a try to integrate Angular 2 and Java via the GWT compiler in a way that is pleasant for the developper.
 
 ## Demo
 
 A demo is available [here](http://lteconsulting.fr/angular2-gwt/).
 
-**Note**: That's really the beginning, more is going to come. But at this stage, this project proves the feasibility of such things.
-
 ## Instructions
 
-Checkout this repository, then :
+Checkout this repo, then :
 
-		# go to the web app resource directory
-		cd angular2-gwt/angular2-gwt/src/main/webapp
-		
-		# fetches the angular libraries (~ 50 Mo)
-		# note : you need npm for this to work !
-		npm install
-
-Now that the Angular files have been loaded, you just need to compile the project :
-
-		cd ../../../..
 		mvn clean install
-
-Now, you can run the project either by dropping the `index.html` file into a browser, or by running the super dev mode :
-
-		cd angular2-gwt
-		mvn gwt:run
+		cd angular2-gwt-sample
+		mvn gwt:run (or mvn jetty:run-war)
 
 Go to your browser and it should work !
+
+When loading the source in eclipse, don't forget to enable code generation on the angular2-gwt-sample project!
+
 
 ## Explanation
 
@@ -80,7 +64,3 @@ And the component is implemented in the `MyComponent` class, which reads :
 		}
 
 This is quiet straight-forward, and the class in the code contains comments so that you can understand everything that is going on...
-
-## Roadmap
-
-More documentation and more exploration of Angular. Would be good to cover all the features.
